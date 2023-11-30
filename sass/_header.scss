@@ -1,0 +1,131 @@
+header {
+  padding: 54px 0 200px;
+  background-image: url(../assets/img/header_Image.png);
+  background-repeat: no-repeat;
+  background-position: 95% 60%;
+  position: relative;
+  .leaf_img1 {
+    position: absolute;
+    transform: rotate(-100deg);
+    right: 5%;
+    top: 140px;
+  }
+  .leaf_img2 {
+    position: absolute;
+    top: 180px;
+    transform: rotate(-50deg) scale(0.6);
+    right: 520px;
+  }
+  .leaf_img3 {
+    position: absolute;
+    bottom: 45px;
+    right: 450px;
+    transform: rotate(10deg) rotateX(80deg);
+  }
+}
+nav {
+  padding: 0 0 180px;
+  max-width: 1300px;
+  margin: 0 auto;
+  .nav_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left_nav {
+      display: flex;
+      align-items: center;
+      gap: 160px;
+      .logo {
+        color: $color-black;
+        font-family: Poppins;
+        font-size: 26px;
+        font-weight: 500;
+      }
+      .navlist {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        .link:nth-child(1)a {
+          font-weight: 500;
+          opacity: 1;
+          color: $color-green;
+        }
+        a {
+          @include a-link;
+          &:hover {
+            font-weight: 500;
+            opacity: 1;
+            color: $color-green;
+          }
+        }
+      }
+    }
+  }
+}
+.right_nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  .nav_icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .purchase_link {
+      position: relative;
+      &::after {
+        top: 0;
+        right: -5px;
+        content: "";
+        width: 7px;
+        height: 7px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+      }
+    }
+  }
+  .nav_btn {
+    @include button-style;
+    border-radius: 27px;
+    background: #494949;
+    padding: 14px 30px;
+    border: 3px solid transparent;
+    &:active {
+      border: 3px solid #494949;
+      color: #494949;
+      background-color: transparent;
+    }
+  }
+}
+.header_content {
+  h1 {
+    color: $color-light-gray;
+    font-size: 76px;
+    font-weight: 770;
+    max-width: 596px;
+    span {
+      color: #5fb848;
+    }
+  }
+  p {
+    @include section-p(left);
+    margin: 30px 0 50px;
+    max-width: 520px;
+    opacity: 0.8;
+  }
+  .header_btn {
+    @include button-style;
+    border-radius: 50px;
+    background: var(
+      --green-gradient,
+      linear-gradient(180deg, #64bb47 0%, #2c9553 100%)
+    );
+    padding: 16px 40px;
+    border: 3px solid transparent;
+    &:active {
+      background: transparent;
+      border: 3px solid #64bb47;
+      color: #64bb47;
+    }
+  }
+}

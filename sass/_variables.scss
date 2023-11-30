@@ -1,0 +1,54 @@
+$color-dark-blue: #2c3847;
+$color-black: #333;
+$color-green: #5fb848;
+$color-light-gray: #181d19;
+$color-h1-black: #151414;
+$color-white: #fff;
+$color-headline-p-text: #3b433e;
+$text-gradient: linear-gradient(180deg, #39463f 0%, #101612 100%);
+$color-footer-link: #657582;
+$color-dark-black: #000;
+
+@mixin a-link(
+  $font-size: 20px,
+  $color: $color-dark-blue,
+  $font-weight: 400,
+  $opacity: 0.8
+) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin button-style($font-size: 24px) {
+  color: $color-white;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@mixin section-heading($font-size: 54px) {
+  color: $color-h1-black;
+  font-size: $font-size;
+  font-weight: 770;
+}
+@mixin section-p($text-align: center) {
+  color: $color-headline-p-text;
+  text-align: $text-align;
+  font-size: 24px;
+  font-weight: 750;
+}
+@mixin h4($font-size: 28px) {
+  color: $color-light-gray;
+  text-align: center;
+  font-size: $font-size;
+  font-weight: 770;
+}
+
+@mixin p($font-size: 18px, $line-height: 141.667%) {
+  color: $color-light-gray;
+  font-size: $font-size;
+  font-weight: 750;
+  line-height: $line-height;
+}

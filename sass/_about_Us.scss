@@ -1,0 +1,183 @@
+#About {
+  padding: 0 0 177px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .About_btn {
+    @include button-style;
+    background-color: $color-green;
+    border-radius: 50px;
+    padding: 16px 41px;
+    border: 3px solid transparent;
+    background: var(
+      --green-gradient,
+      linear-gradient(180deg, #64bb47 0%, #2c9553 100%)
+    );
+    &:active {
+      background: transparent;
+      border: 3px solid #64bb47;
+      color: #64bb47;
+    }
+  }
+
+  .about_top_cnt {
+    display: flex;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+    gap: 95px;
+    .about_text_cnt {
+      max-width: 500px;
+      h1 {
+        @include section-heading;
+      }
+      p {
+        @include p;
+        margin: 30px 0 68px;
+        opacity: 0.8;
+      }
+    }
+    .top_about_images_box {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+.right_boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .food_img:nth-child(1) {
+    transform: translateY(-50px);
+  }
+  .food_img:nth-child(2) {
+    transform: translateY(-50px);
+  }
+}
+.about_center_cnt {
+  padding: 142px 0 85px;
+  display: flex;
+  align-items: center;
+  gap: 71px;
+  .about_text_cnt {
+    max-width: 514px;
+    h1 {
+      @include section-heading;
+    }
+    p {
+      @include p;
+      margin: 30px 0 40px;
+      opacity: 0.8;
+    }
+  }
+  .about_btm_left_img {
+    position: relative;
+    &::after {
+      content: "";
+      width: 480px;
+      height: 480px;
+      border-radius: 480px;
+      background-color: #e1f2e1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+}
+.chefs_info {
+  display: flex;
+  max-width: 1250px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 30px;
+  .chef_img {
+    position: relative;
+    .chef_leaf {
+      position: absolute;
+    }
+    .leaf_num_1 {
+      bottom: -57px;
+      right: -90px;
+    }
+    .leaf_num_2 {
+      top: 230px;
+      left: 50px;
+      transform: rotate(95deg) scale(0.8);
+      z-index: -2;
+    }
+    .leaf_num_3 {
+      top: 250px;
+      left: 35px;
+      transform: rotate(70deg);
+      z-index: -100;
+    }
+    img {
+      border-radius: 0 0 180px 0;
+      clip-path: polygon(
+        0 42%,
+        0 0,
+        100% 0,
+        100% 22%,
+        100% 100%,
+        57% 100%,
+        39% 94%,
+        13% 81%,
+        0 64%
+      );
+    }
+    &::after {
+      content: "";
+      width: 480px;
+      height: 480px;
+      border-radius: 480px;
+      background-color: #e1f2e1;
+      position: absolute;
+      top: 110px;
+      left: 155px;
+      z-index: -1;
+    }
+  }
+  .about_text_cnt {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 500px;
+    h1 {
+      @include section-heading;
+      max-width: 400px;
+    }
+    p {
+      @include p;
+      opacity: 0.8;
+    }
+  }
+  .offers_card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    .offer_info {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      span {
+        border-radius: 3px;
+        background-color: $color-green;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@import url(./_fonts.scss);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen", sans-serif;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body{
+  background-color: #FFF;
+  overflow-x:hidden ;
+}

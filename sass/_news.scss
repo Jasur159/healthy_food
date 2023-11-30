@@ -1,0 +1,53 @@
+#news {
+  padding: 120px 0 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .news_text {
+    h1 {
+      @include section-heading($font-size: 36px);
+      text-align: center;
+    }
+    p {
+      color: $color-headline-p-text;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 450;
+      margin: 15px 0 60px;
+    }
+  }
+}
+
+.news_input_box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  .text_input {
+    width: 330px;
+    .text {
+      width: 100%;
+      padding: 20px;
+      outline: 1.5px solid #f5f5f5;
+      border-radius: 165px;
+      border: 1.5px solid #f5f5f5;
+      color: #8a8a8a;
+      font-size: 18px;
+      font-weight: 450;
+    }
+  }
+  .news_btn {
+    @include button-style;
+    border-radius: 50px;
+    background: var(
+      --green-gradient,
+      linear-gradient(180deg, #64bb47 0%, #2c9553 100%)
+    );
+    padding: 17px 32px;
+    border: 3px solid transparent;
+    &:active {
+      background: transparent;
+      border: 3px solid #64bb47;
+      color: #64bb47;
+    }
+  }
+}
